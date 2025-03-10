@@ -75,7 +75,7 @@ void sendDataToServer(const String& jsonData) {
   if (WiFi.status() == WL_CONNECTED) {
     if (client.connect("192.168.1.3", 80)) {
       
-      // Mengirim permintaan HTTP POST ke server
+
       client.print(String("POST /api/sensor/index.php HTTP/1.1\r\n") +
                    "Host: 103.59.94.18\r\n" +
                    "Content-Type: application/json\r\n" +
